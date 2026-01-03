@@ -11,10 +11,32 @@
             "user": {
                 "data": {
                     "host": "IP-adres",
-                    "api_key": "API-sleutel (verstrekt door Guntamatic)"
+                    "api_key": "API-sleutel (verstrekt door Guntamatic)",
+                    "write_key": "Schrijfsleutel (optioneel - neem contact op met Guntamatic)"
                 },
                 "description": "Stel de Guntamatic Biostar integratie in.",
                 "title": "Guntamatic Biostar integratie voor Home Assistant via API"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "heating_program": {
+                "name": "Verwarmingsprogramma",
+                "state": {
+                    "off": "Uit",
+                    "normal": "Normaal",
+                    "heat": "Verwarmen",
+                    "lower": "Verlaagd"
+                }
+            }
+        },
+        "number": {
+            "day_temperature": {
+                "name": "Dagtemperatuur"
+            },
+            "night_temperature": {
+                "name": "Nachttemperatuur"
             }
         }
     }

@@ -18,6 +18,8 @@ from homeassistant.const import (
 PLATFORMS = [
     Platform.SENSOR,
     Platform.BINARY_SENSOR,
+    Platform.SELECT,
+    Platform.NUMBER,
 ]
 
 # Global values
@@ -26,14 +28,25 @@ MANUFACTURER = "Guntamatic"
 MODEL = "Biostar"
 DATA_SCHEMA_HOST = "host"
 DATA_SCHEMA_API_KEY = "api_key"
+DATA_SCHEMA_WRITE_KEY = "write_key"
 
 # Data schema required by configuration flow
 DATA_SCHEMA = vol.Schema(
     {
         vol.Required(DATA_SCHEMA_HOST): cv.string,
         vol.Required(DATA_SCHEMA_API_KEY): cv.string,
+        vol.Optional(DATA_SCHEMA_WRITE_KEY): cv.string,
     }
 )
+
+# Program options for heating control (write access required)
+PROGRAM_OPTIONS = {
+    "off": 0,
+    "normal": 1,
+    "heat": 2,
+    "lower": 3,
+}
+PROGRAM_OPTIONS_REVERSE = {v: k for k, v in PROGRAM_OPTIONS.items()}
 
 
 # Unit to device class mapping for dynamic sensor creation

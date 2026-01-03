@@ -11,10 +11,32 @@
             "user": {
                 "data": {
                     "host": "Adres IP",
-                    "api_key": "Klucz API (dostarczony przez Guntamatic)"
+                    "api_key": "Klucz API (dostarczony przez Guntamatic)",
+                    "write_key": "Klucz zapisu (opcjonalny - skontaktuj się z Guntamatic)"
                 },
                 "description": "Skonfiguruj integrację Guntamatic Biostar.",
                 "title": "Integracja Guntamatic Biostar dla Home Assistant przez API"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "heating_program": {
+                "name": "Program ogrzewania",
+                "state": {
+                    "off": "Wyłączone",
+                    "normal": "Normalny",
+                    "heat": "Ogrzewanie",
+                    "lower": "Obniżony"
+                }
+            }
+        },
+        "number": {
+            "day_temperature": {
+                "name": "Temperatura dzienna"
+            },
+            "night_temperature": {
+                "name": "Temperatura nocna"
             }
         }
     }

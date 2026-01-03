@@ -11,10 +11,32 @@
             "user": {
                 "data": {
                     "host": "IP adresa",
-                    "api_key": "API klíč (poskytnutý společností Guntamatic)"
+                    "api_key": "API klíč (poskytnutý společností Guntamatic)",
+                    "write_key": "Klíč pro zápis (volitelný - kontaktujte podporu Guntamatic)"
                 },
                 "description": "Nastavte integraci Guntamatic Biostar.",
                 "title": "Integrace Guntamatic Biostar pro Home Assistant přes API"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "heating_program": {
+                "name": "Topný program",
+                "state": {
+                    "off": "Vypnuto",
+                    "normal": "Normální",
+                    "heat": "Topení",
+                    "lower": "Snížený"
+                }
+            }
+        },
+        "number": {
+            "day_temperature": {
+                "name": "Denní teplota"
+            },
+            "night_temperature": {
+                "name": "Noční teplota"
             }
         }
     }

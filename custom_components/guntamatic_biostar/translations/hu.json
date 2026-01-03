@@ -11,10 +11,32 @@
             "user": {
                 "data": {
                     "host": "IP-cím",
-                    "api_key": "API-kulcs (a Guntamatic által biztosított)"
+                    "api_key": "API-kulcs (a Guntamatic által biztosított)",
+                    "write_key": "Írási kulcs (opcionális - Guntamatic támogatás)"
                 },
                 "description": "Állítsa be a Guntamatic Biostar integrációt.",
                 "title": "Guntamatic Biostar integráció a Home Assistant számára API-n keresztül"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "heating_program": {
+                "name": "Fűtési program",
+                "state": {
+                    "off": "Ki",
+                    "normal": "Normál",
+                    "heat": "Fűtés",
+                    "lower": "Csökkentett"
+                }
+            }
+        },
+        "number": {
+            "day_temperature": {
+                "name": "Nappali hőmérséklet"
+            },
+            "night_temperature": {
+                "name": "Éjszakai hőmérséklet"
             }
         }
     }

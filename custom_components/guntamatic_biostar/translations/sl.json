@@ -11,10 +11,32 @@
             "user": {
                 "data": {
                     "host": "IP naslov",
-                    "api_key": "API ključ (zagotovil Guntamatic)"
+                    "api_key": "API ključ (zagotovil Guntamatic)",
+                    "write_key": "Ključ za pisanje (neobvezno - kontaktirajte Guntamatic)"
                 },
                 "description": "Nastavite integracijo Guntamatic Biostar.",
                 "title": "Integracija Guntamatic Biostar za Home Assistant prek API-ja"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "heating_program": {
+                "name": "Program ogrevanja",
+                "state": {
+                    "off": "Izklop",
+                    "normal": "Normalno",
+                    "heat": "Ogrevanje",
+                    "lower": "Znižano"
+                }
+            }
+        },
+        "number": {
+            "day_temperature": {
+                "name": "Dnevna temperatura"
+            },
+            "night_temperature": {
+                "name": "Nočna temperatura"
             }
         }
     }
